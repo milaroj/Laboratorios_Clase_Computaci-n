@@ -39,3 +39,36 @@ Datos y gráficos en `practica3_ejercicioB_hilos.xlsx`.
 
 **Conclusión:** paralelizar ayuda solo cuando el trabajo por hilo es suficientemente
 grande frente al overhead de sincronización.
+
+
+## Práctica 4 — Ejercicio A: Biblioteca estática
+
+Ejecución de `bench-static 1000000 1000 1.0 2.0`:
+
+| Métrica | Por iteración |
+|---|---|
+| fill A | 446.687 µs |
+| fill B | 441.706 µs |
+| add    | 943.492 µs |
+
+Tamaño de `libvectorops.a`: **1.8 KB**.
+
+## Ejercicio B: Biblioteca dinámica
+
+Ejecución de `bench-dynamic 1000000 1000 1.0 2.0`:
+
+| Métrica | Por iteración |
+|---|---|
+| fill A | 1679.598 µs |
+| fill B | 1631.095 µs |
+| add    | 1713.662 µs |
+
+Tamaño de `libvectorops.so`: **16 KB**.
+
+**Comparación:** La versión dinámica es notablemente más lenta en las tres métricas (2-4x)
+y el archivo generado es más grande. Esto se debe a que las llamadas a funciones en una
+biblioteca dinámica pasan por la PLT (indirección en tiempo de ejecución), y el compilador
+no puede optimizar entre el programa y la biblioteca (sin inlining ni optimizaciones
+inter-procedurales) porque el contenido del `.so` no se conoce en tiempo de compilación.
+El `.so` es más grande porque incluye metadata para carga dinámica (tabla de símbolos,
+información de reubicación) que la estática no necesita.
