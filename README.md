@@ -1,4 +1,6 @@
-# Práctica de clase 3 — Ejercicio A
+# Práctica de clase 3 
+
+Ejercicio A
 
 Comparación de `cpu-naive.c` vs `cpu-affinity.c`, variando hilos de 1 a 20.
 Datos y gráfico completos en `practica3_ejercicioA_hilos.xlsx`.
@@ -17,3 +19,23 @@ paralelismo real.
 menor a 1 y empeora con más hilos, por lo que la eficiencia (Speedup/N) cae fuertemente.
 
 **Nota:** `cpu-affinity` es más rápido que `cpu-naive` en todo el rango.
+
+
+## Ejercicio B
+
+Datos y gráficos en `practica3_ejercicioB_hilos.xlsx`.
+
+**softmax_openmp:**
+- Escalabilidad: nula, empeora con más hilos (1.08s → 5.53s).
+- Proporción paralela: código 100% paralelizado, pero el problema es tan pequeño (1000
+  elementos, 300,000 regiones paralelas totales) que el overhead de sincronización supera
+  el trabajo real.
+- Eficiencia: muy baja, decrece con más hilos.
+
+**matmul_tiled_openmp:**
+- Escalabilidad: buena hasta ~9-10 hilos (0.70s → ~0.10s), luego se estabiliza.
+- Proporción paralela: alta y efectiva, hay suficiente trabajo por hilo.
+- Eficiencia: alta al inicio, cae después de la meseta (Ley de Amdahl).
+
+**Conclusión:** paralelizar ayuda solo cuando el trabajo por hilo es suficientemente
+grande frente al overhead de sincronización.
