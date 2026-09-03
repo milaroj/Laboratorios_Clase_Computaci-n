@@ -1,4 +1,4 @@
-# Práctica de clase 3 y 4 — EL5859
+# Práctica de clase 3 y 4
 
 ## Práctica 3 — Ejercicio A: Threading, afinidad y escalabilidad
 
