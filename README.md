@@ -16,6 +16,4 @@ paralelismo real.
 **Eficiencia:** Baja y decreciente. Como el tiempo sube en vez de bajar, el speedup es
 menor a 1 y empeora con más hilos, por lo que la eficiencia (Speedup/N) cae fuertemente.
 
-**Nota:** `cpu-affinity` es más rápido que `cpu-naive` en todo el rango, gracias a fijar
-cada hilo a un CPU (evita migraciones) y a la técnica de "first touch" (memoria más
-cercana al core que la usa).
+**Nota:** `cpu-affinity` es más rápido que `cpu-naive` en todo el rango.
