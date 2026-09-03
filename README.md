@@ -1,6 +1,6 @@
 # Práctica de clase 3 
 
-Ejercicio A
+##Ejercicio A
 
 Comparación de `cpu-naive.c` vs `cpu-affinity.c`, variando hilos de 1 a 20.
 Datos y gráfico completos en `practica3_ejercicioA_hilos.xlsx`.
