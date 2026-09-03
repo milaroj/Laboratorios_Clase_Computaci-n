@@ -41,7 +41,7 @@ Datos y gráficos en `practica3_ejercicioB_hilos.xlsx`.
 grande frente al overhead de sincronización.
 
 
-## Práctica 4 
+# Práctica 4 
 ## Ejercicio A: Biblioteca estática
 
 Ejecución de `bench-static 1000000 1000 1.0 2.0`:
