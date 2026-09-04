@@ -67,10 +67,9 @@ Ejecución de `bench-dynamic 1000000 1000 1.0 2.0`:
 
 Tamaño de `libvectorops.so`: **16 KB**.
 
-**Comparación:** La versión dinámica es notablemente más lenta en las tres métricas (2-4x)
+**Comparación:** La versión dinámica es notablemente más lenta en las tres métricas
 y el archivo generado es más grande. Esto se debe a que las llamadas a funciones en una
 biblioteca dinámica pasan por la PLT (indirección en tiempo de ejecución), y el compilador
-no puede optimizar entre el programa y la biblioteca (sin inlining ni optimizaciones
-inter-procedurales) porque el contenido del `.so` no se conoce en tiempo de compilación.
+no puede optimizar entre el programa y la biblioteca porque el contenido del `.so` no se conoce en tiempo de compilación.
 El `.so` es más grande porque incluye metadata para carga dinámica (tabla de símbolos,
 información de reubicación) que la estática no necesita.
