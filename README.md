@@ -1,3 +1,19 @@
+| Característica | Valor |
+|---|---|
+| Equipo | Dell G16-7620 |
+| Procesador | Intel Core i7-12700H (12ª gen) |
+| Arquitectura (x86-64, ARMv8, etc.) | x86-64 |
+| Set de instrucciones vectoriales (NEON, AVX2, AVX512) | AVX2 |
+| Número de núcleos / hilos | 14 núcleos / 20 hilos |
+| Frecuencia base / turbo | 2.3 GHz / 4.7 GHz |
+| Tipo de memoria RAM | SODIMM Synchronous 4800 MHz (0.2 ns) |
+| Capacidad de memoria | 16 GiB (2 × 8 GiB) |
+
+
+
+
+
+
 # Práctica de clase 3 
 
 ## Ejercicio A
