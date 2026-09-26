@@ -4,7 +4,7 @@ Laboratorio del Capitulo 3 (Unidades de Procesamiento Grafico): tres ejercicios 
 
 ## Entorno de ejecucion
 
-- GPU: NVIDIA GeForce RTX 3060 Laptop (local, no el cluster remoto del curso)
+- GPU: NVIDIA GeForce RTX 3060 Laptop (local)
 - Driver: 595.91.07 - CUDA 13.2 (runtime del driver)
 - Compilador: nvcc release 12.4, V12.4.131
 - SO: Ubuntu (dual boot)
